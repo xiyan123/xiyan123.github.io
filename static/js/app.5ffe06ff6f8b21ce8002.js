@@ -759,17 +759,6 @@ webpackJsonp([1], {
                         target: "_blank"
                     }
                 },
-                [t._v("Profile")]), t._v("  \n\t\t\t\t"), i("a", {
-                    attrs: {
-                        href: "https://github.com/GitHub-Laziji/vblog",
-                        target: "_blank"
-                    }
-                },
-                [t._v("VBlog")])])]), t._v(" "), i("el-col", {
-                    attrs: {
-                        span: 4
-                    }
-                },
                 [i("div", {
                     staticStyle: {
                         "text-align": "center",
@@ -791,18 +780,6 @@ webpackJsonp([1], {
                 [i("a", {
                     attrs: {
                         href: "https://developer.github.com",
-                        target: "_blank"
-                    }
-                },
-                [t._v("GitHub-API")]), t._v("  \n\t\t\t\t"), i("a", {
-                    attrs: {
-                        href: "https://cn.vuejs.org/",
-                        target: "_blank"
-                    }
-                },
-                [t._v("Vue.js")]), t._v("  \n\t\t\t\t"), i("a", {
-                    attrs: {
-                        href: "http://element.eleme.io/",
                         target: "_blank"
                     }
                 },
