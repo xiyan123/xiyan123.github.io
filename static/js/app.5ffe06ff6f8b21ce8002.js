@@ -759,26 +759,6 @@ webpackJsonp([1], {
                         target: "_blank"
                     }
                 },
-                [i("div", {
-                    staticStyle: {
-                        "text-align": "center",
-                        "font-size": "18px"
-                    }
-                },
-                [i("i", {
-                    staticClass: "el-icon-location-outline"
-                })])]), t._v(" "), i("el-col", {
-                    attrs: {
-                        span: 10
-                    }
-                },
-                [i("div", {
-                    staticStyle: {
-                        float: "right"
-                    }
-                },
-                [t._v("Element")])])])], 1)], 1)
-            },
             staticRenderFns: []
         },
         H = {
