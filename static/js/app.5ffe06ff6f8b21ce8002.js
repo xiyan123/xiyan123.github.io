@@ -777,12 +777,6 @@ webpackJsonp([1], {
                         float: "right"
                     }
                 },
-                [i("a", {
-                    attrs: {
-                        href: "https://developer.github.com",
-                        target: "_blank"
-                    }
-                },
                 [t._v("Element")])])])], 1)], 1)
             },
             staticRenderFns: []
@@ -957,7 +951,7 @@ webpackJsonp([1], {
                 [t._v("GitHub主页")]), t._v(" "), t.mini ? t._e() : i("a", {
                     staticClass: "btn",
                     attrs: {
-                        href: "https://github.com/GitHub-Laziji/vblog",
+                        href: "https://github.com/xiyan123",
                         target: "_blank"
                     }
                 },
@@ -4109,7 +4103,7 @@ webpackJsonp([1], {
                 [i("el-step", {
                     attrs: {
                         title: "克隆项目",
-                        description: "https://github.com/GitHub-Laziji/GitHub-Laziji.github.io"
+                        description: "https:///GitHub-Laziji/GitHub-Laziji.github.io"
                     }
                 }), t._v(" "), i("el-step", {
                     attrs: {
@@ -4945,9 +4939,9 @@ webpackJsonp([1], {
                 [t._v("关注 " + t._s(t.followingTotal))])], 1)], 1), t._v(" "), i("van-cell", {
                     staticClass: "mobile-border mobile-margin-top",
                     attrs: {
-                        title: "　github.com/GitHub-Laziji",
+                        title: "　github.com/GitHub-xiyan123",
                         icon: "sign",
-                        url: "https://github.com/GitHub-Laziji",
+                        url: "https://github.com/GitHub-xiyan123",
                         "is-link": ""
                     }
                 }), t._v(" "), i("van-cell", {
