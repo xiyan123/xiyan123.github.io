@@ -711,11 +711,6 @@ webpackJsonp([1], {
                         "text-align": "left"
                     }
                 },
-                [i("el-alert", {
-                    attrs: {
-                        title: "Token获取",
-                        type: "info",
-                        description: "在 github-> settings-> developerSettings-> personalAccessTokens 勾选gist权限,获取Token. 详情参考README.md",
                         closable: !1
                     }
                 })], 1)]), t._v(" "), i("token-dialog", {
@@ -5096,41 +5091,6 @@ webpackJsonp([1], {
                 component: zt,
                 meta: {
                     title: "项目详情"
-                }
-            }]
-        },
-        {
-            path: "/user/helper",
-            redirect: "/user/helper/main",
-            component: M,
-            meta: {
-                type: "user",
-                icon: "el-icon-printer",
-                title: "使用帮助",
-                mini: !0
-            },
-            children: [{
-                path: "main",
-                component: Nt,
-                meta: {
-                    title: "使用帮助"
-                }
-            }]
-        },
-        {
-            path: "/user/readme",
-            redirect: "/user/readme/main",
-            component: M,
-            meta: {
-                type: "user",
-                icon: "el-icon-document",
-                title: "README.md"
-            },
-            children: [{
-                path: "main",
-                component: Ut,
-                meta: {
-                    title: "README.md"
                 }
             }]
         },
