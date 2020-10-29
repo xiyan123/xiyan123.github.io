@@ -34,12 +34,8 @@ webpackJsonp([1], {
                 this.$setTitle(this.$route.meta.title);
                 var t = this.$util.getWindowSize(),
                 e = this.$route.path.split("/");
-                "user" == e[1] && t.height > 1.2 * t.width && this.
-
-$router.push("/mobile/user/blog"),
-                "mobile" == e[1] && t.height <= 1.2 * t.width && 
-
-this.$router.push("/")
+                "user" == e[1] && t.height > 1.2 * t.width && this.$router.push("/mobile/user/blog"),
+                "mobile" == e[1] && t.height <= 1.2 * t.width && this.$router.push("/")
             }
         },
         s = {
@@ -66,9 +62,7 @@ this.$router.push("/")
             },
             verifyEmail: function(t) {
                 if (null == t || void 0 == t) return ! 1;
-                return /^[0-9A-Za-z_]+@[0-9A-Za-z]+\.[A-Za-z]+/.test
-
-(t)
+                return /^[0-9A-Za-z_]+@[0-9A-Za-z]+\.[A-Za-z]+/.test(t)
             },
             utcToLocal: function(t) {
                 var e = function(t) {
@@ -77,16 +71,10 @@ this.$router.push("/")
                 i = t.split(/[^0-9]/),
                 n = new Date(i[0], i[1] - 1, i[2], i[3], i[4], i[5]),
                 o = new Date(n.getTime() + 288e5);
-                return e(o.getFullYear()) + "-" + e(o.getMonth() + 1) 
-
-+ "-" + e(o.getDate()) + " " + e(o.getHours()) + ":" + e(o.getMinutes
-
-()) + ":" + e(o.getSeconds())
+                return e(o.getFullYear()) + "-" + e(o.getMonth() + 1) + "-" + e(o.getDate()) + " " + e(o.getHours()) + ":" + e(o.getMinutes()) + ":" + e(o.getSeconds())
             },
             guid: function() {
-                return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace
-
-(/[xy]/g,
+                return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,
                 function(t) {
                     var e = 16 * Math.random() | 0;
                     return ("x" == t ? e: 3 & e | 8).toString(16)
@@ -100,39 +88,17 @@ this.$router.push("/")
             },
             fullScreen: function() {
                 var t = document.documentElement;
-                window.ActiveXObject ? new ActiveXObject
-
-("WScript.Shell").SendKeys("{F11}") : t.requestFullScreen ? 
-
-t.requestFullScreen() : t.msRequestFullscreen ? t.msRequestFullscreen
-
-() : t.webkitRequestFullScreen ? t.webkitRequestFullScreen() : 
-
-t.mozRequestFullScreen && t.mozRequestFullScreen()
+                window.ActiveXObject ? new ActiveXObject("WScript.Shell").SendKeys("{F11}") : t.requestFullScreen ? t.requestFullScreen() : t.msRequestFullscreen ? t.msRequestFullscreen() : t.webkitRequestFullScreen ? t.webkitRequestFullScreen() : t.mozRequestFullScreen && t.mozRequestFullScreen()
             },
             fullExit: function() {
                 var t = document.documentElement;
-                window.ActiveXObject ? new ActiveXObject
-
-("WScript.Shell").SendKeys("{F11}") : t.requestFullScreen ? 
-
-document.exitFullscreen() : t.msRequestFullscreen ? 
-
-document.msExitFullscreen() : t.webkitRequestFullScreen ? 
-
-document.webkitCancelFullScreen() : t.mozRequestFullScreen && 
-
-document.mozCancelFullScreen()
+                window.ActiveXObject ? new ActiveXObject("WScript.Shell").SendKeys("{F11}") : t.requestFullScreen ? document.exitFullscreen() : t.msRequestFullscreen ? document.msExitFullscreen() : t.webkitRequestFullScreen ? document.webkitCancelFullScreen() : t.mozRequestFullScreen && document.mozCancelFullScreen()
             },
             parseHeaders: function(t) {
                 try {
-                    for (var e = t.link.split(","), i = 0; i < 
-
-e.length; i++) {
+                    for (var e = t.link.split(","), i = 0; i < e.length; i++) {
                         var n = e[i];
-                        if (! (n.indexOf('rel="last"') < 0)) for (var 
-
-o = n.split(/[\?&]/), a = 0; a < o.length; a++) {
+                        if (! (n.indexOf('rel="last"') < 0)) for (var o = n.split(/[\?&]/), a = 0; a < o.length; a++) {
                             var r = o[a].split("=");
                             if ("page" == r[0]) return parseInt(r[1])
                         }
@@ -156,18 +122,12 @@ o = n.split(/[\?&]/), a = 0; a < o.length; a++) {
                 var e = parseInt(t),
                 i = parseInt(e / 60),
                 n = parseInt(e % 60);
-                return (i < 10 ? "0": "") + parseInt(e / 60) + ":" + 
-
-(n < 10 ? "0": "") + parseInt(e % 60)
+                return (i < 10 ? "0": "") + parseInt(e / 60) + ":" + (n < 10 ? "0": "") + parseInt(e % 60)
             },
             getWindowSize: function() {
                 var t = {};
-                return t.width = window.innerWeight || 
-
-document.documentElement.clientWidth || document.body.clientWidth,
-                t.height = window.innerWeight || 
-
-document.documentElement.clientHeight || document.body.clientHeight,
+                return t.width = window.innerWeight || document.documentElement.clientWidth || document.body.clientWidth,
+                t.height = window.innerWeight || document.documentElement.clientHeight || document.body.clientHeight,
                 t
             },
             addHttp: function(t) {
@@ -240,17 +200,13 @@ document.documentElement.clientHeight || document.body.clientHeight,
         w = function(t) {
             var e = j.state.configuration.githubUsername;
             return _({
-                url: "/users/" + e + "/followers?page=" + t.page + 
-
-"&per_page=" + t.pageSize
+                url: "/users/" + e + "/followers?page=" + t.page + "&per_page=" + t.pageSize
             })
         },
         k = function(t) {
             var e = j.state.configuration.githubUsername;
             return _({
-                url: "/users/" + e + "/following?page=" + t.page + 
-
-"&per_page=" + t.pageSize
+                url: "/users/" + e + "/following?page=" + t.page + "&per_page=" + t.pageSize
             })
         },
         T = function(t) {
@@ -277,9 +233,7 @@ document.documentElement.clientHeight || document.body.clientHeight,
                     var i = t.commit;
                     y(e).then(function(t) {
                         var o = t.data;
-                        j.state.configuration.githubUsername == 
-
-o.login ? (i("SET_TOKEN", e), n.
+                        j.state.configuration.githubUsername == o.login ? (i("SET_TOKEN", e), n.
                     default.prototype.$notify({
                             title:
                             "成功",
@@ -294,9 +248,7 @@ o.login ? (i("SET_TOKEN", e), n.
                     }).
                     catch(function() {})
                 },
-                Cancellation: function(t) { (0, t.commit)
-
-("REMOVE_TOKEN"),
+                Cancellation: function(t) { (0, t.commit)("REMOVE_TOKEN"),
                     n.
                 default.prototype.$message({
                         message:
@@ -367,24 +319,14 @@ o.login ? (i("SET_TOKEN", e), n.
             },
             mutations: {
                 SET_CONFIGURATION: function(t, e) {
-                    t.githubUsername = e.githubUsername || "GitHub-
-
-Laziji",
+                    t.githubUsername = e.githubUsername || "GitHub-Laziji",
                     t.blogTitle = e.blogTitle || t.githubUsername,
-                    t.blogDescribe = e.blogDescribe || "欢迎来到" + 
-
-t.githubUsername + "的个人博客。",
-                    t.htmlTitle = e.htmlTitle || t.githubUsername + "
-
-的博客",
+                    t.blogDescribe = e.blogDescribe || "欢迎来到" + t.githubUsername + "的个人博客。",
+                    t.htmlTitle = e.htmlTitle || t.githubUsername + "的博客",
                     t.fontColor = e.fontColor || "#ffffff",
                     t.useBackgroundImage = e.useBackgroundImage || !1,
-                    t.backgroundColorLeft = e.backgroundColorLeft || 
-
-"#155799",
-                    t.backgroundColorRight = e.backgroundColorRight || 
-
-"#159957",
+                    t.backgroundColorLeft = e.backgroundColorLeft || "#155799",
+                    t.backgroundColorRight = e.backgroundColorRight || "#159957",
                     t.audioUrl = e.audioUrl || "",
                     t.mini = e.mini || !1,
                     t.audioAutoPlay = e.audioAutoPlay || !1,
@@ -392,17 +334,11 @@ t.githubUsername + "的个人博客。",
                 }
             },
             actions: {
-                LocalReload: function(t, e) { (0, t.commit)
-
-("SET_CONFIGURATION", e)
+                LocalReload: function(t, e) { (0, t.commit)("SET_CONFIGURATION", e)
                 },
                 Init: function(t) {
                     var e = t.commit,
-                    i = void 0; (i = window.XMLHttpRequest ? new 
-
-XMLHttpRequest: new ActiveXObject("Microsoft.XMLHTTP")).open("GET", 
-
-"../../../static/configuration.json", !1),
+                    i = void 0; (i = window.XMLHttpRequest ? new XMLHttpRequest: new ActiveXObject("Microsoft.XMLHTTP")).open("GET", "../../../static/configuration.json", !1),
                     i.send(),
                     e("SET_CONFIGURATION", JSON.parse(i.responseText))
                 }
@@ -569,11 +505,7 @@ XMLHttpRequest: new ActiveXObject("Microsoft.XMLHTTP")).open("GET",
                 onSubmit: function() {
                     var t = this;
                     this.$refs.tokenForm.validate(function(e) {
-                        e && (t.$store.dispatch("Authentication", 
-
-t.tokenForm.token), "function" == typeof t.handleClose && 
-
-t.handleClose())
+                        e && (t.$store.dispatch("Authentication", t.tokenForm.token), "function" == typeof t.handleClose && t.handleClose())
                     }),
                     this.show = !1
                 }
@@ -608,9 +540,7 @@ t.handleClose())
                         label: "GitHub"
                     }
                 },
-                [i("el-tag", [t._v(t._s(t.githubUsername))])], 1), 
-
-t._v(" "), i("el-form-item", {
+                [i("el-tag", [t._v(t._s(t.githubUsername))])], 1), t._v(" "), i("el-form-item", {
                     attrs: {
                         prop: "token",
                         label: "Token",
@@ -709,11 +639,7 @@ t._v(" "), i("el-form-item", {
                 },
                 t._l(t.constantRouterMap,
                 function(e) {
-                    return ! e.meta || "user" != e.meta.type || !
-
-t.token && e.meta.LoginRequired || t.mini && e.meta.mini ? t._e() : i
-
-("el-menu-item", {
+                    return ! e.meta || "user" != e.meta.type || !t.token && e.meta.LoginRequired || t.mini && e.meta.mini ? t._e() : i("el-menu-item", {
                         key: e.path,
                         attrs: {
                             index: e.path
@@ -750,9 +676,7 @@ t.token && e.meta.LoginRequired || t.mini && e.meta.mini ? t._e() : i
                         size: "small"
                     }
                 },
-                [t._v(" ")]), t._v("   Token未绑定  \n            
-
-"), i("el-button", {
+                [t._v(" ")]), t._v("   Token未绑定  \n            "), i("el-button", {
                     attrs: {
                         type: "text"
                     },
@@ -773,9 +697,7 @@ t.token && e.meta.LoginRequired || t.mini && e.meta.mini ? t._e() : i
                         size: "small"
                     }
                 },
-                [t._v(" ")]), t._v("   Token已绑定  \n            
-
-"), i("el-button", {
+                [t._v(" ")]), t._v("   Token已绑定  \n            "), i("el-button", {
                     attrs: {
                         type: "text"
                     },
@@ -793,11 +715,7 @@ t.token && e.meta.LoginRequired || t.mini && e.meta.mini ? t._e() : i
                     attrs: {
                         title: "Token获取",
                         type: "info",
-                        description: "在 github-> settings-> 
-
-developerSettings-> personalAccessTokens 勾选gist权限,获取Token. 详情
-
-参考README.md",
+                        description: "在 github-> settings-> developerSettings-> personalAccessTokens 勾选gist权限,获取Token. 详情参考README.md",
                         closable: !1
                     }
                 })], 1)]), t._v(" "), i("token-dialog", {
@@ -835,19 +753,66 @@ developerSettings-> personalAccessTokens 勾选gist权限,获取Token. 详情
                         span: 10
                     }
                 },
-                [i("div", [t._v("\n\t\t\t\t© 2018 GitHub-Laziji  \n
-
-\t\t\t\t"), i("a", {
+                [i("div", [t._v("\n\t\t\t\t© 2018 GitHub-Laziji  \n\t\t\t\t"), i("a", {
                     attrs: {
                         href: "https://github.com/GitHub-Laziji",
                         target: "_blank"
                     }
                 },
+                [t._v("Profile")]), t._v("  \n\t\t\t\t"), i("a", {
+                    attrs: {
+                        href: "https://github.com/GitHub-Laziji/vblog",
+                        target: "_blank"
+                    }
+                },
+                [t._v("VBlog")])])]), t._v(" "), i("el-col", {
+                    attrs: {
+                        span: 4
+                    }
+                },
+                [i("div", {
+                    staticStyle: {
+                        "text-align": "center",
+                        "font-size": "18px"
+                    }
+                },
+                [i("i", {
+                    staticClass: "el-icon-location-outline"
+                })])]), t._v(" "), i("el-col", {
+                    attrs: {
+                        span: 10
+                    }
+                },
+                [i("div", {
+                    staticStyle: {
+                        float: "right"
+                    }
+                },
+                [i("a", {
+                    attrs: {
+                        href: "https://developer.github.com",
+                        target: "_blank"
+                    }
+                },
+                [t._v("GitHub-API")]), t._v("  \n\t\t\t\t"), i("a", {
+                    attrs: {
+                        href: "https://cn.vuejs.org/",
+                        target: "_blank"
+                    }
+                },
+                [t._v("Vue.js")]), t._v("  \n\t\t\t\t"), i("a", {
+                    attrs: {
+                        href: "http://element.eleme.io/",
+                        target: "_blank"
+                    }
+                },
+                [t._v("Element")])])])], 1)], 1)
+            },
+            staticRenderFns: []
+        },
         H = {
             components: {
-                Sidebar: i("VU/8")(A, B, !1, null, null, 
-
-null).exports,
+                Sidebar: i("VU/8")(A, B, !1, null, null, null).exports,
                 AppMain: i("VU/8")({
                     name: "AppMain",
                     computed: {}
@@ -883,15 +848,7 @@ null).exports,
                 }
             },
             computed: a()({},
-            Object(r.b)(["githubUsername", "blogTitle", 
-
-"blogDescribe", "avatarUrl", "name", "location", "blog", "fontColor", 
-
-"useBackgroundImage", "backgroundColorLeft", "backgroundColorRight", 
-
-"audioUrl", "mini", "followersTotal", "followingTotal", 
-
-"audioAutoPlay", "webSites"])),
+            Object(r.b)(["githubUsername", "blogTitle", "blogDescribe", "avatarUrl", "name", "location", "blog", "fontColor", "useBackgroundImage", "backgroundColorLeft", "backgroundColorRight", "audioUrl", "mini", "followersTotal", "followingTotal", "audioAutoPlay", "webSites"])),
             watch: {
                 "$refs.music.currentTime": function() {
                     console.log(this.$refs.music.currentTime)
@@ -916,18 +873,12 @@ null).exports,
             created: function() {},
             methods: {
                 selectTopbar: function(t) {
-                    switch (this.topbar.active = "" == 
-
-this.topbar.active ? " ": "", t) {
+                    switch (this.topbar.active = "" == this.topbar.active ? " ": "", t) {
                     case "#githubHome":
-                        window.open("https://github.com/" + 
-
-this.githubUsername);
+                        window.open("https://github.com/" + this.githubUsername);
                         break;
                     case "#blog":
-                        this.blog ? window.open((this.blog.match
-
-(/https?:\/\//i) ? "": "https://") + this.blog) : this.$message({
+                        this.blog ? window.open((this.blog.match(/https?:\/\//i) ? "": "https://") + this.blog) : this.$message({
                             message: "博主没有其他博客",
                             type: "info"
                         });
@@ -936,41 +887,25 @@ this.githubUsername);
                         if (/#webSites-\d+/.test(t)) {
                             var e = parseInt(t.split("-")[1]),
                             i = this.webSites[e].url;
-                            window.open((i.match(/https?:\/\//i) ? "": 
-
-"https://") + i)
+                            window.open((i.match(/https?:\/\//i) ? "": "https://") + i)
                         }
                     }
                 },
                 moveIcon: function(t) {
                     var e = window.innerWidth;
-                    this.randomIcon[t].top = this.$util.randomInt(20, 
-
-300);
+                    this.randomIcon[t].top = this.$util.randomInt(20, 300);
                     var i = this.$util.randomInt(10, e - 310);
                     i > e / 2 - 150 && (i += 300),
                     this.randomIcon[t].left = i
                 },
                 full: function() {
-                    this.fullButton.full ? (this.$util.fullExit(), 
-
-this.fullButton.full = !1) : (this.$util.fullScreen(), 
-
-this.fullButton.full = !0)
+                    this.fullButton.full ? (this.$util.fullExit(), this.fullButton.full = !1) : (this.$util.fullScreen(), this.fullButton.full = !0)
                 },
                 listenMusic: function() {
-                    this.$refs.music && (this.$refs.music.readyState 
-
-&& (this.music.maxTime = this.$refs.music.duration), this.music.isPlay 
-
-= !this.$refs.music.paused, this.music.currentTime = this.
-
-$refs.music.currentTime)
+                    this.$refs.music && (this.$refs.music.readyState && (this.music.maxTime = this.$refs.music.duration), this.music.isPlay = !this.$refs.music.paused, this.music.currentTime = this.$refs.music.currentTime)
                 },
                 play: function() {
-                    this.$refs.music.paused ? this.$refs.music.play() 
-
-: this.$refs.music.pause(),
+                    this.$refs.music.paused ? this.$refs.music.play() : this.$refs.music.pause(),
                     this.music.isPlay = !this.$refs.music.paused,
                     this.$nextTick(function() {
                         document.getElementById("play").blur()
@@ -981,9 +916,7 @@ $refs.music.currentTime)
                 },
                 changeVolume: function(t) {
                     this.music.volume += t,
-                    this.music.volume > 100 && (this.music.volume = 
-
-100),
+                    this.music.volume > 100 && (this.music.volume = 100),
                     this.music.volume < 0 && (this.music.volume = 0),
                     this.$refs.music.volume = this.music.volume / 100
                 }
@@ -996,11 +929,7 @@ $refs.music.currentTime)
                 i = t._self._c || e;
                 return i("div", [i("section", {
                     staticClass: "page-header",
-                    style: "background-image: linear-gradient(120deg, 
-
-" + t.backgroundColorLeft + ", " + t.backgroundColorRight + ");color: 
-
-" + t.fontColor + ";"
+                    style: "background-image: linear-gradient(120deg, " + t.backgroundColorLeft + ", " + t.backgroundColorRight + ");color: " + t.fontColor + ";"
                 },
                 [i("div", {
                     staticStyle: {
@@ -1019,9 +948,7 @@ $refs.music.currentTime)
                 },
                 [i("el-button", {
                     attrs: {
-                        icon: t.fullButton.full ? "el-icon-close": 
-
-"el-icon-rank",
+                        icon: t.fullButton.full ? "el-icon-close": "el-icon-rank",
                         circle: ""
                     },
                     on: {
@@ -1031,14 +958,10 @@ $refs.music.currentTime)
                 function(e, n) {
                     return i("div", {
                         key: "ri" + n,
-                        style: "position:absolute; top:" + e.top + 
-
-"px; left:" + e.left + "px; z-index:1;"
+                        style: "position:absolute; top:" + e.top + "px; left:" + e.left + "px; z-index:1;"
                     },
                     [i("font", {
-                        style: "font-size: " + e.size + 
-
-"px;color:#fff;"
+                        style: "font-size: " + e.size + "px;color:#fff;"
                     },
                     [i("b", [t._v("♪")])])], 1)
                 }), t._v(" "), i("h1", {
@@ -1050,20 +973,14 @@ $refs.music.currentTime)
                 [t._v(t._s(t.blogDescribe))]), t._v(" "), i("a", {
                     staticClass: "btn",
                     attrs: {
-                        href: "https://github.com/" + 
-
-t.githubUsername,
+                        href: "https://github.com/" + t.githubUsername,
                         target: "_blank"
                     }
                 },
-                [t._v("GitHub主页")]), t._v(" "), t.mini ? t._e() : i
-
-("a", {
+                [t._v("GitHub主页")]), t._v(" "), t.mini ? t._e() : i("a", {
                     staticClass: "btn",
                     attrs: {
-                        href: "https://github.com/GitHub-
-
-Laziji/vblog",
+                        href: "https://github.com/GitHub-Laziji/vblog",
                         target: "_blank"
                     }
                 },
@@ -1117,9 +1034,7 @@ Laziji/vblog",
                         index: "#blog"
                     }
                 },
-                [t._v("其他博客")])], 2), t._v(" "), t.webSites.length 
-
-> 0 ? i("el-submenu", {
+                [t._v("其他博客")])], 2), t._v(" "), t.webSites.length > 0 ? i("el-submenu", {
                     attrs: {
                         index: "#webSites"
                     }
@@ -1191,9 +1106,7 @@ Laziji/vblog",
                     attrs: {
                         slot: "reference",
                         id: "play",
-                        icon: t.music.isPlay ? "el-icon-refresh": 
-
-"el-icon-caret-right",
+                        icon: t.music.isPlay ? "el-icon-refresh": "el-icon-caret-right",
                         circle: ""
                     },
                     on: {
@@ -1236,13 +1149,7 @@ Laziji/vblog",
                         span: 6
                     }
                 },
-                [t._v("\n                            " + t._s(t.
-
-$util.formatTime(t.music.currentTime)) + "/" + t._s(t.
-
-$util.formatTime(t.music.maxTime)) + "\n                        ")])], 
-
-1), t._v(" "), t.audioAutoPlay ? i("audio", {
+                [t._v("\n                            " + t._s(t.$util.formatTime(t.music.currentTime)) + "/" + t._s(t.$util.formatTime(t.music.maxTime)) + "\n                        ")])], 1), t._v(" "), t.audioAutoPlay ? i("audio", {
                     ref: "music",
                     attrs: {
                         loop: "",
@@ -1280,20 +1187,14 @@ $util.formatTime(t.music.maxTime)) + "\n                        ")])],
                         "margin-top": "5px"
                     }
                 },
-                [i("b", [t._v(t._s(t.githubUsername))])]), t._v(" "), 
-
-i("div", {
+                [i("b", [t._v(t._s(t.githubUsername))])]), t._v(" "), i("div", {
                     staticStyle: {
                         color: "#606266"
                     }
                 },
                 [i("i", {
                     staticClass: "el-icon-location"
-                }), t._v(" " + t._s(t.location ? t.location: "未填写
-
-地址") + "\n                        "), i("br")])]), t._v(" "), i
-
-("el-col", {
+                }), t._v(" " + t._s(t.location ? t.location: "未填写地址") + "\n                        "), i("br")])]), t._v(" "), i("el-col", {
                     staticStyle: {
                         "text-align": "center"
                     },
@@ -1329,13 +1230,9 @@ i("div", {
                 },
                 [i("i", {
                     staticClass: "el-icon-star-on"
-                }), t._v(" " + t._s(t.name) + "\n                     
-
-   "), i("br"), t._v(" "), i("i", {
+                }), t._v(" " + t._s(t.name) + "\n                        "), i("br"), t._v(" "), i("i", {
                     staticClass: "el-icon-location"
-                }), t._v(" " + t._s(t.location) + "\n                 
-
-       "), i("br"), t._v(" "), i("img", {
+                }), t._v(" " + t._s(t.location) + "\n                        "), i("br"), t._v(" "), i("img", {
                     staticStyle: {
                         width: "200px",
                         height: "200px"
@@ -1362,9 +1259,7 @@ i("div", {
                         span: 18
                     }
                 },
-                [i("app-main")], 1)], 1)], 1), t._v(" "), i("section", 
-
-{
+                [i("app-main")], 1)], 1)], 1), t._v(" "), i("section", {
                     staticClass: "foot"
                 },
                 [i("foot")], 1)])
@@ -1379,9 +1274,7 @@ i("div", {
         V = function(t) {
             var e = j.state.configuration.githubUsername;
             return _({
-                url: "/users/" + e + "/gists?page=" + t.page + 
-
-"&per_page=" + t.pageSize
+                url: "/users/" + e + "/gists?page=" + t.page + "&per_page=" + t.pageSize
             })
         },
         G = function(t) {
@@ -1457,16 +1350,10 @@ i("div", {
                             var i = e.data;
                             for (var n in i.files) {
                                 t.blog.title = n,
-                                t.blog.content = t.$markdown(i.files
-
-[n].content),
+                                t.blog.content = t.$markdown(i.files[n].content),
                                 t.blog.description = i.description,
-                                t.blog.createTime = t.
-
-$util.utcToLocal(i.created_at),
-                                t.blog.updateTime = t.
-
-$util.utcToLocal(i.updated_at);
+                                t.blog.createTime = t.$util.utcToLocal(i.created_at),
+                                t.blog.updateTime = t.$util.utcToLocal(i.updated_at);
                                 break
                             }
                         }).then(function() {
@@ -1506,20 +1393,14 @@ $util.utcToLocal(i.updated_at);
                     },
                     slot: "header"
                 },
-                [i("span", [t._v(t._s(t.blog.title))])]), t._v(" "), 
-
-i("div", {
+                [i("span", [t._v(t._s(t.blog.title))])]), t._v(" "), i("div", {
                     staticStyle: {
                         "font-size": "0.9rem",
                         "line-height": "1.5",
                         color: "#606c71"
                     }
                 },
-                [t._v("\n            发布 " + t._s(t.blog.createTime) 
-
-+ "\n            "), i("br"), t._v(" 更新 " + t._s(t.blog.updateTime) 
-
-+ "\n        ")]), t._v(" "), i("div", {
+                [t._v("\n            发布 " + t._s(t.blog.createTime) + "\n            "), i("br"), t._v(" 更新 " + t._s(t.blog.updateTime) + "\n        ")]), t._v(" "), i("div", {
                     staticStyle: {
                         "font-size": "1.1rem",
                         "line-height": "1.5",
@@ -1533,9 +1414,7 @@ i("div", {
                         "font-family": "'微软雅黑'"
                     }
                 },
-                [t._v(t._s(t.blog.description))])]), t._v(" "), i
-
-("div", {
+                [t._v(t._s(t.blog.description))])]), t._v(" "), i("div", {
                     staticClass: "markdown-body",
                     staticStyle: {
                         "padding-top": "20px"
@@ -1543,9 +1422,7 @@ i("div", {
                     domProps: {
                         innerHTML: t._s(t.blog.content)
                     }
-                })]) : t._e(), t._v(" "), t.blog.id ? t._e() : i("el-
-
-card", {
+                })]) : t._e(), t._v(" "), t.blog.id ? t._e() : i("el-card", {
                     staticStyle: {
                         "margin-bottom": "20px",
                         padding: "20px 0px 20px 0px",
@@ -1591,9 +1468,7 @@ card", {
                 }
             },
             computed: a()({},
-            Object(r.b)(["githubUsername", "followersTotal", 
-
-"followingTotal"])),
+            Object(r.b)(["githubUsername", "followersTotal", "followingTotal"])),
             mounted: function() {
                 this.onSelect()
             },
@@ -1722,28 +1597,20 @@ card", {
                     },
                     [i("i", {
                         staticClass: "el-icon-star-off"
-                    }), t._v(" \n                                    
-
-"), i("a", {
+                    }), t._v(" \n                                    "), i("a", {
                         staticStyle: {
                             "text-decoration": "none",
                             cursor: "pointer"
                         },
                         on: {
                             click: function(i) {
-                                t.$router.push("/user/social/details/" 
-
-+ e.name)
+                                t.$router.push("/user/social/details/" + e.name)
                             }
                         }
                     },
-                    [t._v(t._s(e.name))]), t._v(" "), i("br"), t._v(" 
-
-"), i("i", {
+                    [t._v(t._s(e.name))]), t._v(" "), i("br"), t._v(" "), i("i", {
                         staticClass: "el-icon-message"
-                    }), t._v(" \n                                    
-
-"), i("a", {
+                    }), t._v(" \n                                    "), i("a", {
                         staticStyle: {
                             "text-decoration": "none",
                             cursor: "pointer"
@@ -1753,9 +1620,7 @@ card", {
                             target: "_blank"
                         }
                     },
-                    [t._v("TA的主页")]), t._v(" "), i("br"), t._v(" 
-
-"), i("img", {
+                    [t._v("TA的主页")]), t._v(" "), i("br"), t._v(" "), i("img", {
                         staticStyle: {
                             width: "100%",
                             "border-radius": "5px",
@@ -1777,9 +1642,7 @@ card", {
                         layout: "prev, pager, next",
                         "current-page": t.followers.query.page,
                         "page-size": t.followers.query.pageSize,
-                        total: t.followers.query.pageNumber * 
-
-t.followers.query.pageSize
+                        total: t.followers.query.pageNumber * t.followers.query.pageSize
                     },
                     on: {
                         "current-change": t.onSelect,
@@ -1801,9 +1664,7 @@ t.followers.query.pageSize
                         color: "#dddddd"
                     }
                 },
-                [i("b", [t._v("(￢_￢) 没有一个粉丝")])])], 1)])]), 
-
-t._v(" "), i("el-tab-pane", {
+                [i("b", [t._v("(￢_￢) 没有一个粉丝")])])], 1)])]), t._v(" "), i("el-tab-pane", {
                     staticStyle: {
                         padding: "5px"
                     },
@@ -1848,28 +1709,20 @@ t._v(" "), i("el-tab-pane", {
                     },
                     [i("i", {
                         staticClass: "el-icon-star-off"
-                    }), t._v(" \n                                    
-
-"), i("a", {
+                    }), t._v(" \n                                    "), i("a", {
                         staticStyle: {
                             "text-decoration": "none",
                             cursor: "pointer"
                         },
                         on: {
                             click: function(i) {
-                                t.$router.push("/user/social/details/" 
-
-+ e.name)
+                                t.$router.push("/user/social/details/" + e.name)
                             }
                         }
                     },
-                    [t._v(t._s(e.name))]), t._v(" "), i("br"), t._v(" 
-
-"), i("i", {
+                    [t._v(t._s(e.name))]), t._v(" "), i("br"), t._v(" "), i("i", {
                         staticClass: "el-icon-message"
-                    }), t._v(" \n                                    
-
-"), i("a", {
+                    }), t._v(" \n                                    "), i("a", {
                         staticStyle: {
                             "text-decoration": "none",
                             cursor: "pointer"
@@ -1879,9 +1732,7 @@ t._v(" "), i("el-tab-pane", {
                             target: "_blank"
                         }
                     },
-                    [t._v("TA的主页")]), t._v(" "), i("br"), t._v(" 
-
-"), i("img", {
+                    [t._v("TA的主页")]), t._v(" "), i("br"), t._v(" "), i("img", {
                         staticStyle: {
                             width: "100%",
                             "border-radius": "5px",
@@ -1903,9 +1754,7 @@ t._v(" "), i("el-tab-pane", {
                         layout: "prev, pager, next",
                         "current-page": t.following.query.page,
                         "page-size": t.following.query.pageSize,
-                        total: t.following.query.pageNumber * 
-
-t.following.query.pageSize
+                        total: t.following.query.pageNumber * t.following.query.pageSize
                     },
                     on: {
                         "current-change": t.onSelect,
@@ -1927,9 +1776,7 @@ t.following.query.pageSize
                         color: "#dddddd"
                     }
                 },
-                [i("b", [t._v("(￢_￢) 还没有关注一个人")])])], 
-
-1)])])], 1)], 1)], 1)
+                [i("b", [t._v("(￢_￢) 还没有关注一个人")])])], 1)])])], 1)], 1)], 1)
             },
             staticRenderFns: []
         },
@@ -2001,9 +1848,7 @@ t.following.query.pageSize
                     },
                     slot: "header"
                 },
-                [i("span", [t._v(t._s(t.githubUsername))]), t._v(" "), 
-
-i("el-button", {
+                [i("span", [t._v(t._s(t.githubUsername))]), t._v(" "), i("el-button", {
                     staticStyle: {
                         float: "right",
                         padding: "3px 0"
@@ -2018,9 +1863,7 @@ i("el-button", {
                         }
                     }
                 },
-                [t._v("返回")])], 1), t._v(" "), i("el-row", [i("el-
-
-col", {
+                [t._v("返回")])], 1), t._v(" "), i("el-row", [i("el-col", {
                     staticStyle: {
                         padding: "0px 10px 20px 0px"
                     },
@@ -2048,9 +1891,7 @@ col", {
                         "font-weight": "600"
                     }
                 },
-                [t._v(t._s(t.name) + "\n                        "), i
-
-("br")]), t._v(" "), i("font", {
+                [t._v(t._s(t.name) + "\n                        "), i("br")]), t._v(" "), i("font", {
                     staticStyle: {
                         "font-size": "20px",
                         "font-style": "normal",
@@ -2059,9 +1900,7 @@ col", {
                         color: "#666"
                     }
                 },
-                [t._v(t._s(t.githubUsername) + "\n                     
-
-   "), i("br")]), t._v(" "), t.location ? i("font", {
+                [t._v(t._s(t.githubUsername) + "\n                        "), i("br")]), t._v(" "), t.location ? i("font", {
                     staticStyle: {
                         "font-size": "14px",
                         "line-height": "20px",
@@ -2070,9 +1909,7 @@ col", {
                 },
                 [i("i", {
                     staticClass: "el-icon-location-outline"
-                }), t._v("  " + t._s(t.location) + "\n               
-
-         "), i("br")]) : t._e(), t._v(" "), t.email ? i("font", {
+                }), t._v("  " + t._s(t.location) + "\n                        "), i("br")]) : t._e(), t._v(" "), t.email ? i("font", {
                     staticStyle: {
                         "font-size": "14px",
                         "line-height": "20px",
@@ -2081,9 +1918,7 @@ col", {
                 },
                 [i("i", {
                     staticClass: "el-icon-message"
-                }), t._v("  " + t._s(t.email) + "\n                  
-
-      "), i("br")]) : t._e(), t._v(" "), t.blog ? i("font", {
+                }), t._v("  " + t._s(t.email) + "\n                        "), i("br")]) : t._e(), t._v(" "), t.blog ? i("font", {
                     staticStyle: {
                         "font-size": "14px",
                         color: "#606266"
@@ -2097,9 +1932,7 @@ col", {
                         target: "_blank"
                     }
                 },
-                [t._v(t._s(t.blog))]), t._v(" "), i("br")]) : t._e()], 
-
-1)]), t._v(" "), i("el-col", {
+                [t._v(t._s(t.blog))]), t._v(" "), i("br")]) : t._e()], 1)]), t._v(" "), i("el-col", {
                     staticStyle: {
                         padding: "0px 20px 20px 10px"
                     },
@@ -2118,9 +1951,7 @@ col", {
                         color: "#6a737d"
                     }
                 },
-                [t._v("\n                    " + t._s(t.bio) + "\n     
-
-           ")]) : i("div", {
+                [t._v("\n                    " + t._s(t.bio) + "\n                ")]) : i("div", {
                     staticStyle: {
                         width: "100%",
                         "min-height": "300px",
@@ -2164,20 +1995,14 @@ col", {
                         var i = e.data,
                         n = t.$util.parseHeaders(e.headers);
                         n && (t.query.pageNumber = n);
-                        for (var o = 0; o < i.length; o++) for (var a 
-
-in i[o].files) {
+                        for (var o = 0; o < i.length; o++) for (var a in i[o].files) {
                             var r = {};
                             r.title = a,
                             r.url = i[o].files[a],
                             r.description = i[o].description,
                             r.id = i[o].id,
-                            r.createTime = t.$util.utcToLocal(i
-
-[o].created_at),
-                            r.updateTime = t.$util.utcToLocal(i
-
-[o].updated_at),
+                            r.createTime = t.$util.utcToLocal(i[o].created_at),
+                            r.updateTime = t.$util.utcToLocal(i[o].updated_at),
                             r.hide = !1,
                             t.blogs.push(r);
                             break
@@ -2187,14 +2012,10 @@ in i[o].files) {
                     })
                 },
                 search: function() {
-                    for (var t = 0; t < this.blogs.length; t++) 
-
-this.blogs[t].hide = this.blogs[t].title.indexOf(this.searchKey) < 0
+                    for (var t = 0; t < this.blogs.length; t++) this.blogs[t].hide = this.blogs[t].title.indexOf(this.searchKey) < 0
                 },
                 editBlog: function(t) {
-                    this.token ? this.$router.push("/user/blog/edit/" 
-
-+ this.blogs[t].id) : this.$message({
+                    this.token ? this.$router.push("/user/blog/edit/" + this.blogs[t].id) : this.$message({
                         message: "请绑定有效的Token",
                         type: "warning"
                     })
@@ -2217,9 +2038,7 @@ this.blogs[t].hide = this.blogs[t].title.indexOf(this.searchKey) < 0
                     })
                 },
                 goAdd: function() {
-                    this.token ? this.$router.push("/user/blog/add") : 
-
-this.$message({
+                    this.token ? this.$router.push("/user/blog/add") : this.$message({
                         message: "请绑定有效的Token",
                         type: "warning"
                     })
@@ -2309,9 +2128,7 @@ this.$message({
                         click: t.goAdd
                     }
                 },
-                [t._v("写博文")])], 1), t._v(" "), t.blogs && 
-
-t.blogs.length > 0 ? i("div", [t._l(t.blogs,
+                [t._v("写博文")])], 1), t._v(" "), t.blogs && t.blogs.length > 0 ? i("div", [t._l(t.blogs,
                 function(e, n) {
                     return e.hide ? t._e() : i("el-card", {
                         key: "p" + n,
@@ -2346,9 +2163,7 @@ t.blogs.length > 0 ? i("div", [t._l(t.blogs,
                     },
                     [i("i", {
                         staticClass: "el-icon-edit-outline"
-                    }), t._v("   " + t._s(e.title) + "\n             
-
-               ")])])]), t._v(" "), i("el-col", {
+                    }), t._v("   " + t._s(e.title) + "\n                            ")])])]), t._v(" "), i("el-col", {
                         attrs: {
                             span: 8
                         }
@@ -2397,18 +2212,14 @@ t.blogs.length > 0 ? i("div", [t._l(t.blogs,
                                 t.deleteBlog(n)
                             }
                         }
-                    }) : t._e()], 1)])], 1)], 1), t._v(" "), i("div", 
-
-{
+                    }) : t._e()], 1)])], 1)], 1), t._v(" "), i("div", {
                         staticStyle: {
                             "font-size": "0.9rem",
                             "line-height": "1.5",
                             color: "#606c71"
                         }
                     },
-                    [t._v("\n                最近更新 " + t._s
-
-(e.updateTime) + "\n            ")]), t._v(" "), i("div", {
+                    [t._v("\n                最近更新 " + t._s(e.updateTime) + "\n            ")]), t._v(" "), i("div", {
                         staticStyle: {
                             "font-size": "1.1rem",
                             "line-height": "1.5",
@@ -2416,9 +2227,7 @@ t.blogs.length > 0 ? i("div", [t._l(t.blogs,
                             padding: "10px 0px 0px 0px"
                         }
                     },
-                    [t._v("\n                " + t._s(e.description) + 
-
-"\n            ")])])
+                    [t._v("\n                " + t._s(e.description) + "\n            ")])])
                 }), t._v(" "), i("div", {
                     staticStyle: {
                         "text-align": "center"
@@ -2438,9 +2247,7 @@ t.blogs.length > 0 ? i("div", [t._l(t.blogs,
                             t.$set(t.query, "page", e)
                         }
                     }
-                })], 1)], 2) : t._e(), t._v(" "), t.blogs && 0 != 
-
-t.blogs.length ? t._e() : i("el-card", {
+                })], 1)], 2) : t._e(), t._v(" "), t.blogs && 0 != t.blogs.length ? t._e() : i("el-card", {
                     staticStyle: {
                         "margin-bottom": "20px",
                         padding: "20px 0px 20px 0px",
@@ -2456,9 +2263,7 @@ t.blogs.length ? t._e() : i("el-card", {
                         color: "#dddddd"
                     }
                 },
-                [i("b", [t._v("还没有博客 (╯°Д°)╯︵ 
-
-┻━┻")])])], 1)], 1)
+                [i("b", [t._v("还没有博客 (╯°Д°)╯︵ ┻━┻")])])], 1)], 1)
             },
             staticRenderFns: []
         },
@@ -2544,26 +2349,20 @@ t.blogs.length ? t._e() : i("el-card", {
                 },
                 onSubmit: function() {
                     var t = this;
-                    this.token ? this.publish() : this.
-
-$refs.tokenDialog.open(function() {
+                    this.token ? this.publish() : this.$refs.tokenDialog.open(function() {
                         t.publish()
                     })
                 },
                 publish: function() {
                     var t = this;
                     this.$refs.form.validate(function(e) {
-                        e && (t.submitButton.loading = !0, 
-
-t.submitButton.disabled = !0, P(t.form).then(function(e) {
+                        e && (t.submitButton.loading = !0, t.submitButton.disabled = !0, P(t.form).then(function(e) {
                             var i = e.data;
                             t.$message({
                                 message: "发表成功",
                                 type: "success"
                             }),
-                            t.$router.push("/user/blog/details/" + 
-
-i.id)
+                            t.$router.push("/user/blog/details/" + i.id)
                         }).then(function() {
                             t.submitButton.loading = !1,
                             t.submitButton.disabled = !1
@@ -2654,9 +2453,7 @@ i.id)
                         },
                         expression: "form.content"
                     }
-                })], 1), t._v(" "), i("el-form-item", [i("el-button", 
-
-{
+                })], 1), t._v(" "), i("el-form-item", [i("el-button", {
                     attrs: {
                         type: "primary",
                         loading: t.submitButton.loading,
@@ -2673,9 +2470,7 @@ i.id)
                         }
                     }
                 },
-                [t._v("返回")])], 1)], 1)], 1), t._v(" "), i("token-
-
-dialog", {
+                [t._v("返回")])], 1)], 1)], 1), t._v(" "), i("token-dialog", {
                     ref: "tokenDialog"
                 })], 1)
             },
@@ -2755,9 +2550,7 @@ dialog", {
             Object(r.b)(["token"])),
             mounted: function() {
                 var t = this;
-                this.token ? (this.loading = !0, this.form.id = this.
-
-$route.params.id, G(this.form.id).then(function(e) {
+                this.token ? (this.loading = !0, this.form.id = this.$route.params.id, G(this.form.id).then(function(e) {
                     var i = e.data;
                     for (var n in i.files) {
                         t.form.title = n,
@@ -2781,26 +2574,20 @@ $route.params.id, G(this.form.id).then(function(e) {
                 },
                 onSubmit: function() {
                     var t = this;
-                    this.token ? this.publish() : this.
-
-$refs.tokenDialog.open(function() {
+                    this.token ? this.publish() : this.$refs.tokenDialog.open(function() {
                         t.publish()
                     })
                 },
                 publish: function() {
                     var t = this;
                     this.$refs.form.validate(function(e) {
-                        e && (t.submitButton.loading = !0, 
-
-t.submitButton.disabled = !0, K(t.form).then(function(e) {
+                        e && (t.submitButton.loading = !0, t.submitButton.disabled = !0, K(t.form).then(function(e) {
                             var i = e.data;
                             t.$message({
                                 message: "发表成功",
                                 type: "success"
                             }),
-                            t.$router.push("/user/blog/details/" + 
-
-i.id)
+                            t.$router.push("/user/blog/details/" + i.id)
                         }).then(function() {
                             t.submitButton.loading = !1,
                             t.submitButton.disabled = !1
@@ -2900,9 +2687,7 @@ i.id)
                         },
                         expression: "form.content"
                     }
-                })], 1), t._v(" "), i("el-form-item", [i("el-button", 
-
-{
+                })], 1), t._v(" "), i("el-form-item", [i("el-button", {
                     attrs: {
                         type: "primary",
                         loading: t.submitButton.loading,
@@ -2919,9 +2704,7 @@ i.id)
                         }
                     }
                 },
-                [t._v("返回")])], 1)], 1)], 1), t._v(" "), i("token-
-
-dialog", {
+                [t._v("返回")])], 1)], 1)], 1), t._v(" "), i("token-dialog", {
                     ref: "tokenDialog"
                 })], 1)
             },
@@ -2954,16 +2737,10 @@ dialog", {
                     var i = e.data;
                     for (var n in i.files) {
                         t.blog.title = n,
-                        t.blog.content = t.$markdown(i.files
-
-[n].content),
+                        t.blog.content = t.$markdown(i.files[n].content),
                         t.blog.description = i.description,
-                        t.blog.createTime = t.$util.utcToLocal
-
-(i.created_at),
-                        t.blog.updateTime = t.$util.utcToLocal
-
-(i.updated_at);
+                        t.blog.createTime = t.$util.utcToLocal(i.created_at),
+                        t.blog.updateTime = t.$util.utcToLocal(i.updated_at);
                         break
                     }
                 }).then(function() {
@@ -2972,9 +2749,7 @@ dialog", {
             },
             methods: {
                 edit: function() {
-                    this.token ? this.$router.push("/user/blog/edit/" 
-
-+ this.blog.id) : this.$message({
+                    this.token ? this.$router.push("/user/blog/edit/" + this.blog.id) : this.$message({
                         message: "请绑定有效的Token",
                         type: "warning"
                     })
@@ -3019,9 +2794,7 @@ dialog", {
                         span: 12
                     }
                 },
-                [i("span", [t._v(t._s(t.blog.title))])]), t._v(" "), 
-
-i("el-col", {
+                [i("span", [t._v(t._s(t.blog.title))])]), t._v(" "), i("el-col", {
                     attrs: {
                         span: 12
                     }
@@ -3069,20 +2842,14 @@ i("el-col", {
                         click: t.more
                     }
                 },
-                [t._v("更多博客")])], 1)])], 1)], 1), t._v(" "), i
-
-("div", {
+                [t._v("更多博客")])], 1)])], 1)], 1), t._v(" "), i("div", {
                     staticStyle: {
                         "font-size": "0.9rem",
                         "line-height": "1.5",
                         color: "#606c71"
                     }
                 },
-                [t._v("\n            发布 " + t._s(t.blog.createTime) 
-
-+ "\n            "), i("br"), t._v(" 更新 " + t._s(t.blog.updateTime) 
-
-+ "\n        ")]), t._v(" "), i("div", {
+                [t._v("\n            发布 " + t._s(t.blog.createTime) + "\n            "), i("br"), t._v(" 更新 " + t._s(t.blog.updateTime) + "\n        ")]), t._v(" "), i("div", {
                     staticStyle: {
                         "font-size": "1.1rem",
                         "line-height": "1.5",
@@ -3096,9 +2863,7 @@ i("el-col", {
                         "font-family": "'微软雅黑'"
                     }
                 },
-                [t._v(t._s(t.blog.description))])]), t._v(" "), i
-
-("div", {
+                [t._v(t._s(t.blog.description))])]), t._v(" "), i("div", {
                     staticClass: "markdown-body",
                     staticStyle: {
                         "padding-top": "20px"
@@ -3116,26 +2881,20 @@ i("el-col", {
         bt = function() {
             var t = j.state.configuration.githubUsername;
             return _({
-                url: "/repos/" + t + "/" + t + 
-
-".github.io/contents/README.md"
+                url: "/repos/" + t + "/" + t + ".github.io/contents/README.md"
             })
         },
         xt = function() {
             var t = j.state.configuration.githubUsername;
             return _({
-                url: "/repos/" + t + "/" + t + 
-
-".github.io/contents/static/configuration.json"
+                url: "/repos/" + t + "/" + t + ".github.io/contents/static/configuration.json"
             })
         },
         _t = function(t, e) {
             var n = vt()(t),
             o = j.state.configuration.githubUsername;
             return _({
-                url: "/repos/" + o + "/" + o + 
-
-".github.io/contents/static/configuration.json",
+                url: "/repos/" + o + "/" + o + ".github.io/contents/static/configuration.json",
                 method: "PUT",
                 data: {
                     message: "a",
@@ -3147,9 +2906,7 @@ i("el-col", {
         yt = function(t) {
             var e = j.state.configuration.githubUsername;
             return _({
-                url: "/users/" + e + "/repos?page=" + t.page + 
-
-"&per_page=" + t.pageSize
+                url: "/users/" + e + "/repos?page=" + t.page + "&per_page=" + t.pageSize
             })
         },
         St = function(t) {
@@ -3159,9 +2916,7 @@ i("el-col", {
                     url: "/repos/" + e + "/" + t
                 }).then(function(n) {
                     _({
-                        url: "/repos/" + e + "/" + t + 
-
-"/contents/README.md"
+                        url: "/repos/" + e + "/" + t + "/contents/README.md"
                     }).then(function(t) {
                         n.data.readme_content = t.data.content,
                         i(n)
@@ -3210,15 +2965,9 @@ i("el-col", {
                             r.watchersCount = a.watchers_count,
                             r.forksCount = a.forks_count,
                             r.language = a.language,
-                            r.license = a.license ? a.license.spdx_id: 
-
-null,
-                            r.createTime = t.$util.utcToLocal
-
-(a.created_at),
-                            r.updateTime = t.$util.utcToLocal
-
-(a.updated_at),
+                            r.license = a.license ? a.license.spdx_id: null,
+                            r.createTime = t.$util.utcToLocal(a.created_at),
+                            r.updateTime = t.$util.utcToLocal(a.updated_at),
                             r.hide = !1,
                             t.projects.push(r)
                         }
@@ -3227,11 +2976,7 @@ null,
                     })
                 },
                 search: function() {
-                    for (var t = 0; t < this.projects.length; t++) 
-
-this.projects[t].hide = this.projects[t].name.indexOf(this.searchKey) 
-
-< 0
+                    for (var t = 0; t < this.projects.length; t++) this.projects[t].hide = this.projects[t].name.indexOf(this.searchKey) < 0
                 },
                 goDetails: function(t) {
                     this.$router.push("/user/project/details/" + t)
@@ -3307,9 +3052,7 @@ this.projects[t].hide = this.projects[t].name.indexOf(this.searchKey)
                             t.$share()
                         }
                     }
-                })], 1), t._v(" "), t.projects && t.projects.length > 
-
-0 ? i("div", [t._l(t.projects,
+                })], 1), t._v(" "), t.projects && t.projects.length > 0 ? i("div", [t._l(t.projects,
                 function(e, n) {
                     return e.hide ? t._e() : i("el-card", {
                         key: "pro" + n,
@@ -3344,9 +3087,7 @@ this.projects[t].hide = this.projects[t].name.indexOf(this.searchKey)
                     },
                     [i("i", {
                         staticClass: "el-icon-service"
-                    }), t._v("   " + t._s(e.name) + "\n              
-
-              ")])])]), t._v(" "), i("el-col", {
+                    }), t._v("   " + t._s(e.name) + "\n                            ")])])]), t._v(" "), i("el-col", {
                         attrs: {
                             span: 8
                         }
@@ -3380,9 +3121,7 @@ this.projects[t].hide = this.projects[t].name.indexOf(this.searchKey)
                         },
                         on: {
                             click: function(i) {
-                                t.$share("/user/project/details/" + 
-
-e.name)
+                                t.$share("/user/project/details/" + e.name)
                             }
                         }
                     })], 1)])], 1)], 1), t._v(" "), i("div", {
@@ -3392,9 +3131,7 @@ e.name)
                             color: "#606c71"
                         }
                     },
-                    [t._v("\n                最近更新 " + t._s
-
-(e.updateTime) + "\n            ")]), t._v(" "), i("div", {
+                    [t._v("\n                最近更新 " + t._s(e.updateTime) + "\n            ")]), t._v(" "), i("div", {
                         staticStyle: {
                             "font-size": "1.1rem",
                             "line-height": "1.5",
@@ -3402,9 +3139,7 @@ e.name)
                             padding: "10px 0px 0px 0px"
                         }
                     },
-                    [t._v("\n                " + t._s(e.description) + 
-
-"\n            ")]), t._v(" "), i("div", {
+                    [t._v("\n                " + t._s(e.description) + "\n            ")]), t._v(" "), i("div", {
                         staticStyle: {
                             "font-size": "1.1rem",
                             color: "#303133",
@@ -3431,9 +3166,7 @@ e.name)
                         staticStyle: {
                             margin: "0px 5px 0px 0px"
                         }
-                    })]), t._v("\n                        " + t._s
-
-(e.stargazersCount) + "\n                        "), i("el-tooltip", {
+                    })]), t._v("\n                        " + t._s(e.stargazersCount) + "\n                        "), i("el-tooltip", {
                         attrs: {
                             effect: "dark",
                             content: "watch " + e.watchersCount,
@@ -3445,9 +3178,7 @@ e.name)
                         staticStyle: {
                             margin: "0px 5px 0px 15px"
                         }
-                    })]), t._v("\n                        " + t._s
-
-(e.watchersCount) + "\n                        "), i("el-tooltip", {
+                    })]), t._v("\n                        " + t._s(e.watchersCount) + "\n                        "), i("el-tooltip", {
                         attrs: {
                             effect: "dark",
                             content: "fork " + e.forksCount,
@@ -3459,11 +3190,7 @@ e.name)
                         staticStyle: {
                             margin: "0px 5px 0px 15px"
                         }
-                    })]), t._v("\n                        " + t._s
-
-(e.forksCount) + "\n                    ")], 1), t._v(" "), i("el-
-
-col", {
+                    })]), t._v("\n                        " + t._s(e.forksCount) + "\n                    ")], 1), t._v(" "), i("el-col", {
                         staticStyle: {
                             "text-align": "right"
                         },
@@ -3477,9 +3204,7 @@ col", {
                             type: "danger"
                         }
                     },
-                    [t._v(t._s(e.license))]) : t._e(), t._v(" "), i
-
-("el-tag", {
+                    [t._v(t._s(e.license))]) : t._e(), t._v(" "), i("el-tag", {
                         attrs: {
                             size: "small",
                             type: "success"
@@ -3505,9 +3230,7 @@ col", {
                             t.$set(t.query, "page", e)
                         }
                     }
-                })], 1)], 2) : t._e(), t._v(" "), t.projects && 0 != 
-
-t.projects.length ? t._e() : i("el-card", {
+                })], 1)], 2) : t._e(), t._v(" "), t.projects && 0 != t.projects.length ? t._e() : i("el-card", {
                     staticStyle: {
                         "margin-bottom": "20px",
                         padding: "20px 0px 20px 0px",
@@ -3523,9 +3246,7 @@ t.projects.length ? t._e() : i("el-card", {
                         color: "#dddddd"
                     }
                 },
-                [i("b", [t._v("还没有开源项目 (╯°Д°)╯︵ 
-
-┻━┻")])])], 1)], 1)
+                [i("b", [t._v("还没有开源项目 (╯°Д°)╯︵ ┻━┻")])])], 1)], 1)
             },
             staticRenderFns: []
         },
@@ -3555,18 +3276,10 @@ t.projects.length ? t._e() : i("el-card", {
                     t.project.forksCount = n.forks_count,
                     t.project.language = n.language,
                     t.project.description = n.description,
-                    t.project.license = n.license ? n.license.spdx_id: 
-
-null,
-                    t.project.content = t.$markdown(o.decode
-
-(n.readme_content)),
-                    t.project.createTime = t.$util.utcToLocal
-
-(n.created_at),
-                    t.project.updateTime = t.$util.utcToLocal
-
-(n.updated_at)
+                    t.project.license = n.license ? n.license.spdx_id: null,
+                    t.project.content = t.$markdown(o.decode(n.readme_content)),
+                    t.project.createTime = t.$util.utcToLocal(n.created_at),
+                    t.project.updateTime = t.$util.utcToLocal(n.updated_at)
                 }).
                 catch(function() {
                     return t.loading = !1
@@ -3618,9 +3331,7 @@ null,
                         span: 12
                     }
                 },
-                [i("span", [t._v(t._s(t.project.name))])]), t._v(" "), 
-
-i("el-col", {
+                [i("span", [t._v(t._s(t.project.name))])]), t._v(" "), i("el-col", {
                     attrs: {
                         span: 12
                     }
@@ -3670,20 +3381,14 @@ i("el-col", {
                         click: t.more
                     }
                 },
-                [t._v("更多项目")])], 1)])], 1)], 1), t._v(" "), i
-
-("div", {
+                [t._v("更多项目")])], 1)])], 1)], 1), t._v(" "), i("div", {
                     staticStyle: {
                         "font-size": "0.9rem",
                         "line-height": "1.5",
                         color: "#606c71"
                     }
                 },
-                [t._v("\n            发布 " + t._s
-
-(t.project.createTime) + "\n            "), i("br"), t._v(" 更新 " + 
-
-t._s(t.project.updateTime) + "\n        ")]), t._v(" "), i("div", {
+                [t._v("\n            发布 " + t._s(t.project.createTime) + "\n            "), i("br"), t._v(" 更新 " + t._s(t.project.updateTime) + "\n        ")]), t._v(" "), i("div", {
                     staticStyle: {
                         "font-size": "1.1rem",
                         "line-height": "1.5",
@@ -3691,9 +3396,7 @@ t._s(t.project.updateTime) + "\n        ")]), t._v(" "), i("div", {
                         padding: "20px 0px 0px 0px"
                     }
                 },
-                [t._v("\n            " + t._s(t.project.description) + 
-
-"\n        ")]), t._v(" "), i("div", {
+                [t._v("\n            " + t._s(t.project.description) + "\n        ")]), t._v(" "), i("div", {
                     staticStyle: {
                         "font-size": "1.1rem",
                         color: "#303133",
@@ -3721,11 +3424,7 @@ t._s(t.project.updateTime) + "\n        ")]), t._v(" "), i("div", {
                     staticStyle: {
                         margin: "0px 5px 0px 0px"
                     }
-                })]), t._v("\n                    " + t._s
-
-(t.project.stargazersCount) + "\n                    "), i("el-
-
-tooltip", {
+                })]), t._v("\n                    " + t._s(t.project.stargazersCount) + "\n                    "), i("el-tooltip", {
                     attrs: {
                         effect: "dark",
                         content: "watch " + t.project.watchersCount,
@@ -3737,11 +3436,7 @@ tooltip", {
                     staticStyle: {
                         margin: "0px 5px 0px 15px"
                     }
-                })]), t._v("\n                    " + t._s
-
-(t.project.watchersCount) + "\n                    "), i("el-tooltip", 
-
-{
+                })]), t._v("\n                    " + t._s(t.project.watchersCount) + "\n                    "), i("el-tooltip", {
                     attrs: {
                         effect: "dark",
                         content: "fork " + t.project.forksCount,
@@ -3753,11 +3448,7 @@ tooltip", {
                     staticStyle: {
                         margin: "0px 5px 0px 15px"
                     }
-                })]), t._v("\n                    " + t._s
-
-(t.project.forksCount) + "\n                ")], 1), t._v(" "), i
-
-("el-col", {
+                })]), t._v("\n                    " + t._s(t.project.forksCount) + "\n                ")], 1), t._v(" "), i("el-col", {
                     staticStyle: {
                         "text-align": "right"
                     },
@@ -3771,17 +3462,13 @@ tooltip", {
                         type: "danger"
                     }
                 },
-                [t._v(t._s(t.project.license))]) : t._e(), t._v(" "), 
-
-i("el-tag", {
+                [t._v(t._s(t.project.license))]) : t._e(), t._v(" "), i("el-tag", {
                     attrs: {
                         size: "small",
                         type: "success"
                     }
                 },
-                [t._v(t._s(t.project.language))])], 1)], 1)], 1), 
-
-t._v(" "), t.project.content ? i("div", {
+                [t._v(t._s(t.project.language))])], 1)], 1)], 1), t._v(" "), t.project.content ? i("div", {
                     staticClass: "markdown-body",
                     staticStyle: {
                         "padding-top": "20px"
@@ -3789,9 +3476,7 @@ t._v(" "), t.project.content ? i("div", {
                     domProps: {
                         innerHTML: t._s(t.project.content)
                     }
-                }) : t._e(), t._v(" "), t.project.content ? t._e() : 
-
-i("div", {
+                }) : t._e(), t._v(" "), t.project.content ? t._e() : i("div", {
                     staticStyle: {
                         padding: "20px 0px 20px 0px",
                         "text-align": "center"
@@ -3803,9 +3488,7 @@ i("div", {
                         color: "#dddddd"
                     }
                 },
-                [i("b", [t._v("还没有介绍 (╯°Д°)╯︵ 
-
-┻━┻")])])], 1)])], 1)
+                [i("b", [t._v("还没有介绍 (╯°Д°)╯︵ ┻━┻")])])], 1)])], 1)
             },
             staticRenderFns: []
         },
@@ -3905,26 +3588,18 @@ i("div", {
                         loading: !1,
                         disabled: !1
                     },
-                    predefineColors: ["#ff4500", "#ff8c00", "#ffd700", 
-
-"#CCFC2D", "#90ee90", "#2DFCA6", "#00ced1", "#1e90ff", "#c71585", 
-
-"#FC2DEB"]
+                    predefineColors: ["#ff4500", "#ff8c00", "#ffd700", "#CCFC2D", "#90ee90", "#2DFCA6", "#00ced1", "#1e90ff", "#c71585", "#FC2DEB"]
                 }
             },
             computed: a()({},
             Object(r.b)(["token"])),
             mounted: function() {
                 var t = this;
-                this.token ? (this.loading = !0, xt().then(function(e) 
-
-{
+                this.token ? (this.loading = !0, xt().then(function(e) {
                     var n = e.data,
                     o = i("xrTZ").Base64.decode(n.content);
                     t.configure = JSON.parse(o),
-                    t.configure.webSites || t.$set(t.configure, 
-
-"webSites", []),
+                    t.configure.webSites || t.$set(t.configure, "webSites", []),
                     t.initConfigure = JSON.parse(vt()(t.configure)),
                     t.configureSha = n.sha
                 }).then(function() {
@@ -3941,19 +3616,11 @@ i("div", {
                 submit: function() {
                     var t = this;
                     this.$refs.configureForm.validate(function(e) {
-                        e && (t.submitButton.loading = !0, 
-
-t.submitButton.disabled = !0, _t(t.configure, t.configureSha).then
-
-(function(e) {
+                        e && (t.submitButton.loading = !0, t.submitButton.disabled = !0, _t(t.configure, t.configureSha).then(function(e) {
                             var i = e.data;
                             t.configureSha = i.content.sha,
-                            t.initConfigure = JSON.parse(vt()
-
-(t.configure)),
-                            t.$store.dispatch("LocalReload", 
-
-t.configure),
+                            t.initConfigure = JSON.parse(vt()(t.configure)),
+                            t.$store.dispatch("LocalReload", t.configure),
                             t.$notify({
                                 title: "成功",
                                 message: "修改配置成功",
@@ -3966,14 +3633,10 @@ t.configure),
                     })
                 },
                 reset: function() {
-                    this.configure = JSON.parse(vt()
-
-(this.initConfigure))
+                    this.configure = JSON.parse(vt()(this.initConfigure))
                 },
                 addWebSites: function() {
-                    this.configure.webSites.length >= 5 ? this.
-
-$message("站点太多显示效果不好") : this.configure.webSites.push({})
+                    this.configure.webSites.length >= 5 ? this.$message("站点太多显示效果不好") : this.configure.webSites.push({})
                 },
                 removeWebSites: function(t) {
                     this.configure.webSites.splice(t, 1)
@@ -4076,9 +3739,7 @@ $message("站点太多显示效果不好") : this.configure.webSites.push({})
                 },
                 [i("el-input", {
                     attrs: {
-                        placeholder: "欢迎来到" + 
-
-t.configure.githubUsername + "的个人博客。"
+                        placeholder: "欢迎来到" + t.configure.githubUsername + "的个人博客。"
                     },
                     model: {
                         value: t.configure.blogDescribe,
@@ -4095,9 +3756,7 @@ t.configure.githubUsername + "的个人博客。"
                 },
                 [i("el-input", {
                     attrs: {
-                        placeholder: t.configure.githubUsername + "的
-
-博客"
+                        placeholder: t.configure.githubUsername + "的博客"
                     },
                     model: {
                         value: t.configure.htmlTitle,
@@ -4158,9 +3817,7 @@ t.configure.githubUsername + "的个人博客。"
                     model: {
                         value: t.configure.useBackgroundImage,
                         callback: function(e) {
-                            t.$set(t.configure, "useBackgroundImage", 
-
-e)
+                            t.$set(t.configure, "useBackgroundImage", e)
                         },
                         expression: "configure.useBackgroundImage"
                     }
@@ -4177,9 +3834,7 @@ e)
                         },
                         expression: "configure.fontColor"
                     }
-                })], 1), t._v(" "), t.configure.useBackgroundImage ? 
-
-t._e() : i("div", [i("el-row", [i("el-col", {
+                })], 1), t._v(" "), t.configure.useBackgroundImage ? t._e() : i("div", [i("el-row", [i("el-col", {
                     attrs: {
                         span: 3
                     }
@@ -4196,9 +3851,7 @@ t._e() : i("div", [i("el-row", [i("el-col", {
                     model: {
                         value: t.configure.backgroundColorLeft,
                         callback: function(e) {
-                            t.$set(t.configure, "backgroundColorLeft", 
-
-e)
+                            t.$set(t.configure, "backgroundColorLeft", e)
                         },
                         expression: "configure.backgroundColorLeft"
                     }
@@ -4214,9 +3867,7 @@ e)
                     model: {
                         value: t.configure.backgroundColorRight,
                         callback: function(e) {
-                            t.$set(t.configure, 
-
-"backgroundColorRight", e)
+                            t.$set(t.configure, "backgroundColorRight", e)
                         },
                         expression: "configure.backgroundColorRight"
                     }
@@ -4227,22 +3878,12 @@ e)
                     }
                 },
                 [i("div", {
-                    style: "background-image: linear-gradient(120deg, 
-
-" + t.configure.backgroundColorLeft + ", " + 
-
-t.configure.backgroundColorRight + ");border-radius: 5px;border: 1px 
-
-solid #F2F6FC;width:300px;height:100px;"
+                    style: "background-image: linear-gradient(120deg, " + t.configure.backgroundColorLeft + ", " + t.configure.backgroundColorRight + ");border-radius: 5px;border: 1px solid #F2F6FC;width:300px;height:100px;"
                 },
                 [i("div", {
-                    style: "color: " + t.configure.fontColor + 
-
-";text-align: center;padding-top:25px;font-size:35px"
+                    style: "color: " + t.configure.fontColor + ";text-align: center;padding-top:25px;font-size:35px"
                 },
-                [i("b", [t._v("标题")])])])])], 1), t._v(" "), 
-
-t.configure.useBackgroundImage ? i("div", [i("el-form-item", {
+                [i("b", [t._v("标题")])])])])], 1), t._v(" "), t.configure.useBackgroundImage ? i("div", [i("el-form-item", {
                     attrs: {
                         label: "背景图片"
                     }
@@ -4256,11 +3897,7 @@ t.configure.useBackgroundImage ? i("div", [i("el-form-item", {
                 },
                 [i("i", {
                     staticClass: "el-icon-upload"
-                }), t._v(" "), i("div", [t._v("将文件拖到此处 (暂不支
-
-持上传图片)")])])], 1)], 1) : t._e()], 1), t._v(" "), i("el-tab-pane", 
-
-{
+                }), t._v(" "), i("div", [t._v("将文件拖到此处 (暂不支持上传图片)")])])], 1)], 1) : t._e()], 1), t._v(" "), i("el-tab-pane", {
                     staticStyle: {
                         padding: "5px"
                     },
@@ -4297,13 +3934,9 @@ t.configure.useBackgroundImage ? i("div", [i("el-form-item", {
                         model: {
                             value: t.configure.webSites[n].name,
                             callback: function(e) {
-                                t.$set(t.configure.webSites[n], 
-
-"name", e)
+                                t.$set(t.configure.webSites[n], "name", e)
                             },
-                            expression: "configure.webSites
-
-[index].name"
+                            expression: "configure.webSites[index].name"
                         }
                     })], 1), t._v(" "), i("el-col", {
                         staticStyle: {
@@ -4356,9 +3989,7 @@ t.configure.useBackgroundImage ? i("div", [i("el-form-item", {
                     on: {
                         click: t.addWebSites
                     }
-                })], 2)], 1)], 1), t._v(" "), i("el-form-item", [i
-
-("el-button", {
+                })], 2)], 1)], 1), t._v(" "), i("el-form-item", [i("el-button", {
                     attrs: {
                         loading: t.submitButton.loading,
                         disabled: t.submitButton.disabled,
@@ -4378,9 +4009,7 @@ t.configure.useBackgroundImage ? i("div", [i("el-form-item", {
                         placement: "top-end",
                         width: "200",
                         trigger: "click",
-                        content: "打开极简模式将隐藏部分不主要的菜单, 
-
-音乐链接需要是媒体 (不可以是HTML页面)"
+                        content: "打开极简模式将隐藏部分不主要的菜单, 音乐链接需要是媒体 (不可以是HTML页面)"
                     }
                 },
                 [i("el-button", {
@@ -4418,9 +4047,7 @@ t.configure.useBackgroundImage ? i("div", [i("el-form-item", {
             mounted: function() {},
             methods: {
                 deployChange: function(t) {
-                    this.deploy.status = 2 == t ? "success": 
-
-"process",
+                    this.deploy.status = 2 == t ? "success": "process",
                     this.deploy.active = t
                 },
                 useChange: function(t) {
@@ -4505,23 +4132,17 @@ t.configure.useBackgroundImage ? i("div", [i("el-form-item", {
                 [i("el-step", {
                     attrs: {
                         title: "克隆项目",
-                        description: "https://github.com/GitHub-
-
-Laziji/GitHub-Laziji.github.io"
+                        description: "https://github.com/GitHub-Laziji/GitHub-Laziji.github.io"
                     }
                 }), t._v(" "), i("el-step", {
                     attrs: {
                         title: "修改配置",
-                        description: "将 /static/configuration.json 中
-
-的 githubUsername  改为自己的"
+                        description: "将 /static/configuration.json 中的 githubUsername  改为自己的"
                     }
                 }), t._v(" "), i("el-step", {
                     attrs: {
                         title: "查看效果",
-                        description: "https://用户名.github.io 就是你
-
-的博客了"
+                        description: "https://用户名.github.io 就是你的博客了"
                     }
                 })], 1)], 1), t._v(" "), i("el-collapse-item", {
                     attrs: {
@@ -4573,9 +4194,7 @@ Laziji/GitHub-Laziji.github.io"
                 [i("el-step", {
                     attrs: {
                         title: "获取Token",
-                        description: "在GitHub上获取调用API所需的
-
-Token"
+                        description: "在GitHub上获取调用API所需的Token"
                     }
                 }), t._v(" "), i("el-step", {
                     attrs: {
@@ -4585,9 +4204,7 @@ Token"
                 }), t._v(" "), i("el-step", {
                     attrs: {
                         title: "发个博客",
-                        description: "点击博客列表右上角的发布博文按钮
-
-"
+                        description: "点击博客列表右上角的发布博文按钮"
                     }
                 })], 1)], 1), t._v(" "), i("el-collapse-item", {
                     attrs: {
@@ -4603,27 +4220,7 @@ Token"
                         "font-size": "16px"
                     }
                 },
-                [t._v("\n                    配置文件读取的总是与\n    
-
-                "), i("tt", [t._v("index.html")]), t._v(" 同级的\n     
-
-               "), i("tt", [t._v("./static/configuration.json")]), 
-
-t._v(" , 而修改配置的时候是通过\n                    "), i("tt", 
-
-[t._v("github-api")]), t._v(" 修改\n                    "), i("tt", 
-
-[t._v("你的用户名.github.io")]), t._v(" 下的\n                    "), 
-
-i("tt", [t._v("/static/configuration.json")]), t._v(", 所以本地\n      
-
-              "), i("tt", [t._v("npm run dev")]), t._v(" 的时候会出现
-
-修改配置无效的情况, 如果需要修改的话修改本地的配置文件就行, 发布到\n   
-
-                 "), i("tt", [t._v("github")]), t._v(" 之后不影响")], 
-
-1)])], 1)], 1)], 1)
+                [t._v("\n                    配置文件读取的总是与\n                    "), i("tt", [t._v("index.html")]), t._v(" 同级的\n                    "), i("tt", [t._v("./static/configuration.json")]), t._v(" , 而修改配置的时候是通过\n                    "), i("tt", [t._v("github-api")]), t._v(" 修改\n                    "), i("tt", [t._v("你的用户名.github.io")]), t._v(" 下的\n                    "), i("tt", [t._v("/static/configuration.json")]), t._v(", 所以本地\n                    "), i("tt", [t._v("npm run dev")]), t._v(" 的时候会出现修改配置无效的情况, 如果需要修改的话修改本地的配置文件就行, 发布到\n                    "), i("tt", [t._v("github")]), t._v(" 之后不影响")], 1)])], 1)], 1)], 1)
             },
             staticRenderFns: []
         },
@@ -4664,20 +4261,14 @@ i("tt", [t._v("/static/configuration.json")]), t._v(", 所以本地\n
                 },
                 t._l(t.constantRouterMap,
                 function(e) {
-                    return ! e.meta || "mobile" != e.meta.type || !
-
-t.token && e.meta.LoginRequired || t.mini && e.meta.mini ? t._e() : i
-
-("van-tabbar-item", {
+                    return ! e.meta || "mobile" != e.meta.type || !t.token && e.meta.LoginRequired || t.mini && e.meta.mini ? t._e() : i("van-tabbar-item", {
                         key: e.path,
                         attrs: {
                             to: e.path,
                             icon: e.meta.icon
                         }
                     },
-                    [t._v("\n            " + t._s(e.meta.title) + "\n  
-
-      ")])
+                    [t._v("\n            " + t._s(e.meta.title) + "\n        ")])
                 }))], 1)
             },
             staticRenderFns: []
@@ -4697,9 +4288,7 @@ t.token && e.meta.LoginRequired || t.mini && e.meta.mini ? t._e() : i
         };
         var Mt = {
             components: {
-                Bottombar: i("VU/8")(It, Ht, !1, null, null, 
-
-null).exports,
+                Bottombar: i("VU/8")(It, Ht, !1, null, null, null).exports,
                 AppMain: i("VU/8")({
                     name: "AppMain"
                 },
@@ -4714,9 +4303,7 @@ null).exports,
             render: function() {
                 var t = this.$createElement,
                 e = this._self._c || t;
-                return e("div", [e("app-main"), this._v(" "), e
-
-("bottombar", {
+                return e("div", [e("app-main"), this._v(" "), e("bottombar", {
                     staticStyle: {
                         position: "fixed",
                         bottom: "0"
@@ -4758,22 +4345,14 @@ null).exports,
                     V(this.query).then(function(e) {
                         var i = e.data,
                         n = t.$util.parseHeaders(e.headers);
-                        if (n && (t.query.pageNumber = n), 0 != 
-
-i.length) for (var o = 0; o < i.length; o++) for (var a in i[o].files) 
-
-{
+                        if (n && (t.query.pageNumber = n), 0 != i.length) for (var o = 0; o < i.length; o++) for (var a in i[o].files) {
                             var r = {};
                             r.title = a,
                             r.url = i[o].files[a],
                             r.description = i[o].description,
                             r.id = i[o].id,
-                            r.createTime = t.$util.utcToLocal(i
-
-[o].created_at),
-                            r.updateTime = t.$util.utcToLocal(i
-
-[o].updated_at),
+                            r.createTime = t.$util.utcToLocal(i[o].created_at),
+                            r.updateTime = t.$util.utcToLocal(i[o].updated_at),
                             r.hide = !1,
                             t.blogs.push(r);
                             break
@@ -4783,9 +4362,7 @@ i.length) for (var o = 0; o < i.length; o++) for (var a in i[o].files)
                     })
                 },
                 search: function() {
-                    for (var t = 0; t < this.blogs.length; t++) 
-
-this.blogs[t].hide = this.blogs[t].title.indexOf(this.searchKey) < 0
+                    for (var t = 0; t < this.blogs.length; t++) this.blogs[t].hide = this.blogs[t].title.indexOf(this.searchKey) < 0
                 },
                 goDetails: function(t) {
                     console.log(t),
@@ -4799,9 +4376,7 @@ this.blogs[t].hide = this.blogs[t].title.indexOf(this.searchKey) < 0
                 e = t.$createElement,
                 i = t._self._c || e;
                 return i("div", {
-                    style: "background: #f8f8f8;min-height: " + 
-
-t.windowSize.height + "px"
+                    style: "background: #f8f8f8;min-height: " + t.windowSize.height + "px"
                 },
                 [i("van-nav-bar", {
                     staticStyle: {
@@ -4848,9 +4423,7 @@ t.windowSize.height + "px"
                             "font-size": "0.9rem"
                         }
                     },
-                    [t._v(t._s(t.$util.cutStr(e.description, 
-
-50)))])])], 1)
+                    [t._v(t._s(t.$util.cutStr(e.description, 50)))])])], 1)
                 }), t._v(" "), i("div", {
                     staticStyle: {
                         height: "100px"
@@ -4883,16 +4456,10 @@ t.windowSize.height + "px"
                     var i = e.data;
                     for (var n in i.files) {
                         t.blog.title = n,
-                        t.blog.content = t.$markdown(i.files
-
-[n].content),
+                        t.blog.content = t.$markdown(i.files[n].content),
                         t.blog.description = i.description,
-                        t.blog.createTime = t.$util.utcToLocal
-
-(i.created_at),
-                        t.blog.updateTime = t.$util.utcToLocal
-
-(i.updated_at);
+                        t.blog.createTime = t.$util.utcToLocal(i.created_at),
+                        t.blog.updateTime = t.$util.utcToLocal(i.updated_at);
                         break
                     }
                 }).then(function() {
@@ -4940,11 +4507,7 @@ t.windowSize.height + "px"
                         padding: "10px 10px 0px 10px"
                     }
                 },
-                [t._v("\n        发布 " + t._s(t.blog.createTime) + 
-
-"\n        "), i("br"), t._v(" 更新 " + t._s(t.blog.updateTime) + "\n  
-
-  ")]), t._v(" "), i("div", {
+                [t._v("\n        发布 " + t._s(t.blog.createTime) + "\n        "), i("br"), t._v(" 更新 " + t._s(t.blog.updateTime) + "\n    ")]), t._v(" "), i("div", {
                     staticStyle: {
                         "font-size": "1.0rem",
                         "line-height": "1.5",
@@ -4958,9 +4521,7 @@ t.windowSize.height + "px"
                         "font-family": "'微软雅黑'"
                     }
                 },
-                [t._v(t._s(t.blog.description))])]), t._v(" "), i
-
-("div", {
+                [t._v(t._s(t.blog.description))])]), t._v(" "), i("div", {
                     staticClass: "markdown-body",
                     staticStyle: {
                         padding: "10px"
@@ -5016,15 +4577,9 @@ t.windowSize.height + "px"
                             r.watchersCount = a.watchers_count,
                             r.forksCount = a.forks_count,
                             r.language = a.language,
-                            r.license = a.license ? a.license.spdx_id: 
-
-null,
-                            r.createTime = t.$util.utcToLocal
-
-(a.created_at),
-                            r.updateTime = t.$util.utcToLocal
-
-(a.updated_at),
+                            r.license = a.license ? a.license.spdx_id: null,
+                            r.createTime = t.$util.utcToLocal(a.created_at),
+                            r.updateTime = t.$util.utcToLocal(a.updated_at),
                             r.hide = !1,
                             t.projects.push(r)
                         }
@@ -5033,11 +4588,7 @@ null,
                     })
                 },
                 search: function() {
-                    for (var t = 0; t < this.projects.length; t++) 
-
-this.projects[t].hide = this.projects[t].name.indexOf(this.searchKey) 
-
-< 0
+                    for (var t = 0; t < this.projects.length; t++) this.projects[t].hide = this.projects[t].name.indexOf(this.searchKey) < 0
                 },
                 goDetails: function(t) {
                     this.$router.push("/user/project/details/" + t)
@@ -5053,9 +4604,7 @@ this.projects[t].hide = this.projects[t].name.indexOf(this.searchKey)
                 e = t.$createElement,
                 i = t._self._c || e;
                 return i("div", {
-                    style: "background: #f8f8f8;min-height: " + 
-
-t.windowSize.height + "px"
+                    style: "background: #f8f8f8;min-height: " + t.windowSize.height + "px"
                 },
                 [i("van-nav-bar", {
                     staticStyle: {
@@ -5087,9 +4636,7 @@ t.windowSize.height + "px"
                             cursor: "pointer"
                         },
                         attrs: {
-                            to: "/mobile/user/project/details/" + 
-
-e.name
+                            to: "/mobile/user/project/details/" + e.name
                         }
                     },
                     [i("van-panel", {
@@ -5108,9 +4655,7 @@ e.name
                             "font-size": "0.9rem"
                         }
                     },
-                    [t._v(t._s(e.description))]), t._v(" "), i("div", 
-
-{
+                    [t._v(t._s(e.description))]), t._v(" "), i("div", {
                         staticStyle: {
                             padding: "0px 15px 5px 15px",
                             color: "#303133"
@@ -5130,15 +4675,11 @@ e.name
                         attrs: {
                             name: "like"
                         }
-                    }), t._v(" " + t._s(e.stargazersCount) + " \n    
-
-                    "), i("van-icon", {
+                    }), t._v(" " + t._s(e.stargazersCount) + " \n                        "), i("van-icon", {
                         attrs: {
                             name: "coupon"
                         }
-                    }), t._v(" " + t._s(e.forksCount))], 1), t._v(" 
-
-"), i("van-col", {
+                    }), t._v(" " + t._s(e.forksCount))], 1), t._v(" "), i("van-col", {
                         staticStyle: {
                             "text-align": "right"
                         },
@@ -5152,9 +4693,7 @@ e.name
                             type: "danger"
                         }
                     },
-                    [t._v(t._s(e.license))]) : t._e(), t._v(" "), i
-
-("van-tag", {
+                    [t._v(t._s(e.license))]) : t._e(), t._v(" "), i("van-tag", {
                         attrs: {
                             plain: "",
                             type: "primary"
@@ -5197,18 +4736,10 @@ e.name
                     t.project.forksCount = n.forks_count,
                     t.project.language = n.language,
                     t.project.description = n.description,
-                    t.project.license = n.license ? n.license.spdx_id: 
-
-null,
-                    t.project.content = t.$markdown(o.decode
-
-(n.readme_content)),
-                    t.project.createTime = t.$util.utcToLocal
-
-(n.created_at),
-                    t.project.updateTime = t.$util.utcToLocal
-
-(n.updated_at)
+                    t.project.license = n.license ? n.license.spdx_id: null,
+                    t.project.content = t.$markdown(o.decode(n.readme_content)),
+                    t.project.createTime = t.$util.utcToLocal(n.created_at),
+                    t.project.updateTime = t.$util.utcToLocal(n.updated_at)
                 }).then(function() {
                     return t.$toast.clear()
                 })
@@ -5254,11 +4785,7 @@ null,
                         padding: "10px"
                     }
                 },
-                [t._v("\n        发布 " + t._s(t.project.createTime) + 
-
-"\n        "), i("br"), t._v(" 更新 " + t._s(t.project.updateTime) + 
-
-"\n    ")]), t._v(" "), i("div", {
+                [t._v("\n        发布 " + t._s(t.project.createTime) + "\n        "), i("br"), t._v(" 更新 " + t._s(t.project.updateTime) + "\n    ")]), t._v(" "), i("div", {
                     staticStyle: {
                         "font-size": "1.0rem",
                         "line-height": "1.5",
@@ -5266,9 +4793,7 @@ null,
                         padding: "10px"
                     }
                 },
-                [t._v("\n        " + t._s(t.project.description) + "\n 
-
-   ")]), t._v(" "), i("div", {
+                [t._v("\n        " + t._s(t.project.description) + "\n    ")]), t._v(" "), i("div", {
                     staticStyle: {
                         padding: "0px 15px 5px 15px",
                         color: "#606266",
@@ -5289,15 +4814,11 @@ null,
                     attrs: {
                         name: "like"
                     }
-                }), t._v(" " + t._s(t.project.stargazersCount) + " 
-
-\n                        "), i("van-icon", {
+                }), t._v(" " + t._s(t.project.stargazersCount) + " \n                        "), i("van-icon", {
                     attrs: {
                         name: "coupon"
                     }
-                }), t._v(" " + t._s(t.project.forksCount))], 1), 
-
-t._v(" "), i("van-col", {
+                }), t._v(" " + t._s(t.project.forksCount))], 1), t._v(" "), i("van-col", {
                     staticStyle: {
                         "text-align": "right"
                     },
@@ -5311,17 +4832,13 @@ t._v(" "), i("van-col", {
                         type: "danger"
                     }
                 },
-                [t._v(t._s(t.project.license))]) : t._e(), t._v(" "), 
-
-i("van-tag", {
+                [t._v(t._s(t.project.license))]) : t._e(), t._v(" "), i("van-tag", {
                     attrs: {
                         plain: "",
                         type: "primary"
                     }
                 },
-                [t._v(t._s(t.project.language))])], 1)], 1)], 1), 
-
-t._v(" "), i("div", {
+                [t._v(t._s(t.project.language))])], 1)], 1)], 1), t._v(" "), i("div", {
                     staticClass: "markdown-body",
                     staticStyle: {
                         padding: "10px"
@@ -5345,9 +4862,7 @@ t._v(" "), i("div", {
                 }
             },
             computed: a()({},
-            Object(r.b)(["githubUsername", "avatarUrl", "name", 
-
-"location", "blog", "followersTotal", "followingTotal"])),
+            Object(r.b)(["githubUsername", "avatarUrl", "name", "location", "blog", "followersTotal", "followingTotal"])),
             mounted: function() {},
             methods: {}
         },
@@ -5357,9 +4872,7 @@ t._v(" "), i("div", {
                 e = t.$createElement,
                 i = t._self._c || e;
                 return i("div", {
-                    style: "background: #f8f8f8;min-height: " + 
-
-t.windowSize.height + "px"
+                    style: "background: #f8f8f8;min-height: " + t.windowSize.height + "px"
                 },
                 [i("van-nav-bar", {
                     staticStyle: {
@@ -5416,9 +4929,7 @@ t.windowSize.height + "px"
                         "line-height": "33px"
                     }
                 },
-                [t._v(t._s(t.githubUsername))]), t._v(" "), i("br"), 
-
-t._v(" "), i("font", {
+                [t._v(t._s(t.githubUsername))]), t._v(" "), i("br"), t._v(" "), i("font", {
                     staticStyle: {
                         color: "#606266",
                         "font-size": "13px",
@@ -5429,9 +4940,7 @@ t._v(" "), i("font", {
                     attrs: {
                         name: "contact"
                     }
-                }), t._v(" " + t._s(t.name))], 1), t._v(" "), i
-
-("br"), t._v(" "), i("font", {
+                }), t._v(" " + t._s(t.name))], 1), t._v(" "), i("br"), t._v(" "), i("font", {
                     staticStyle: {
                         color: "#606266",
                         "font-size": "13px",
@@ -5442,27 +4951,21 @@ t._v(" "), i("font", {
                     attrs: {
                         name: "location"
                     }
-                }), t._v(" " + t._s(t.location))], 1), t._v(" "), i
-
-("br"), t._v(" "), i("font", {
+                }), t._v(" " + t._s(t.location))], 1), t._v(" "), i("br"), t._v(" "), i("font", {
                     staticStyle: {
                         color: "#606266",
                         "font-size": "13px",
                         "line-height": "13px"
                     }
                 },
-                [t._v("粉丝 " + t._s(t.followersTotal))]), t._v(" \n 
-
-           "), i("font", {
+                [t._v("粉丝 " + t._s(t.followersTotal))]), t._v(" \n            "), i("font", {
                     staticStyle: {
                         color: "#606266",
                         "font-size": "13px",
                         "line-height": "13px"
                     }
                 },
-                [t._v("关注 " + t._s(t.followingTotal))])], 1)], 1), 
-
-t._v(" "), i("van-cell", {
+                [t._v("关注 " + t._s(t.followingTotal))])], 1)], 1), t._v(" "), i("van-cell", {
                     staticClass: "mobile-border mobile-margin-top",
                     attrs: {
                         title: "　github.com/GitHub-Laziji",
@@ -5766,26 +5269,18 @@ t._v(" "), i("van-cell", {
         },
         n.
     default.prototype.$setTitle = function(t) {
-            document.title = t ? j.state.configuration.htmlTitle + " - 
-
-" + t: j.state.configuration.htmlTitle
+            document.title = t ? j.state.configuration.htmlTitle + " - " + t: j.state.configuration.htmlTitle
         },
         n.
     default.prototype.$share = function(t) {
-            t ? t = (window.location + "").split("#")[0] + "#" + t: t 
-
-= window.location;
+            t ? t = (window.location + "").split("#")[0] + "#" + t: t = window.location;
             u.copy(t) ? n.
-        default.prototype.$confirm("链接已复制,去分享给好友吧!!", "分
-
-享", {
+        default.prototype.$confirm("链接已复制,去分享给好友吧!!", "分享", {
                 showCancelButton: !1,
                 showClose: !1,
                 type: "success"
             }) : n.
-        default.prototype.$confirm("链接复制失败,可能因为浏览器不兼
-
-容", "分享", {
+        default.prototype.$confirm("链接复制失败,可能因为浏览器不兼容", "分享", {
                 showCancelButton: !1,
                 showClose: !1,
                 type: "warning"
@@ -5793,9 +5288,7 @@ t._v(" "), i("van-cell", {
         },
         n.
     default.prototype.$mobileShare = function(t) {
-            t ? t = (window.location + "").split("#")[0] + "#" + t: t 
-
-= window.location;
+            t ? t = (window.location + "").split("#")[0] + "#" + t: t = window.location;
             u.copy(t) ? n.
         default.prototype.$dialog.alert({
                 title:
